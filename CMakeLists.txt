@@ -3,5 +3,5 @@ project(learn_c C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(learn_c
-        info/touch.c)
+add_executable(touch info/touch.c)
+add_executable(exed mult/exec.c)
