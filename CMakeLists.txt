@@ -3,6 +3,7 @@ project(learn_c C)
 
 set(CMAKE_C_STANDARD 11)
 
+add_executable(pathconf src/fs/pathconf.c)
 add_executable(touch src/info/touch.c)
 add_executable(exec src/mult/exec.c)
 add_executable(upper src/mult/upper.c)
@@ -18,3 +19,5 @@ add_executable(lseek src/io/lseek.c)
 add_executable(fcntl src/io/fcntl.c)
 add_executable(ioctl src/io/ioctl.c)
 add_executable(overwrite_stdout src/io/overwrite_stdout.c)
+add_executable(pipe src/ipc/pipe.c)
+add_executable(pipe_noblock src/ipc/pipe_noblock.c)
