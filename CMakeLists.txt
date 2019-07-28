@@ -31,6 +31,7 @@ add_executable(sigprocmask src/signal/sigprocmask.c)
 add_executable(sigaction src/signal/sigaction.c)
 add_executable(c_signal src/signal/c_signal.c)
 add_executable(my_sleep src/signal/my_sleep.c)
+add_executable(waitpid_signal src/signal/waitpid_signal.c)
 
 
 
