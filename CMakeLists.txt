@@ -12,6 +12,7 @@ add_executable(wait src/mult/wait.c)
 add_executable(group src/mult/group.c)
 add_executable(waitpid src/mult/waitpid.c)
 add_executable(orphan src/mult/orphan.c)
+add_executable(c_system src/mult/c_system.c)
 add_executable(readwrite src/io/readwrite.c)
 add_executable(nonblock src/io/nonblock.c)
 add_executable(error_overwrite src/io/error_overwrite.c)
@@ -26,3 +27,12 @@ add_executable(fifo_read src/ipc/fifo/fifo_read.c)
 add_executable(m_file src/ipc/mmap/m_file.c)
 add_executable(process_r src/ipc/mmap/process_r.c)
 add_executable(process_w src/ipc/mmap/process_w.c)
+add_executable(sigprocmask src/signal/sigprocmask.c)
+add_executable(sigaction src/signal/sigaction.c)
+add_executable(c_signal src/signal/c_signal.c)
+add_executable(my_sleep src/signal/my_sleep.c)
+
+
+
+
+add_executable(struct_assign playground/struct_assign.c)
