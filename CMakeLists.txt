@@ -32,8 +32,11 @@ add_executable(sigaction src/signal/sigaction.c)
 add_executable(c_signal src/signal/c_signal.c)
 add_executable(my_sleep src/signal/my_sleep.c)
 add_executable(waitpid_signal src/signal/waitpid_signal.c)
+add_executable(setsid src/session/setsid.c)
+add_executable(deamon src/session/daemon.c)
 
 
 
 
 add_executable(struct_assign playground/struct_assign.c)
+add_executable(ttyname playground/ttyname.c)
