@@ -1,5 +1,11 @@
 /**
- * @file 将命令行参数转发至exec的输入
+ * @file 将文件转发至exec的输入
+ * @usage
+ * $ gcc wrapper.c -o wrapper.out
+ * $ gcc upper.c -o upper.out
+ * $ echo helloworld > temp.tmp
+ * $ ./wrapper temp.tmp
+ * HELLOWORLD
  */
 #include <unistd.h>
 #include <stdlib.h>
@@ -17,9 +23,10 @@ int main(int argc, char *argv[])
         perror("open");
         exit(1);
     }
+    // 复制文件 fd 至 stdin 位置，然后关闭fd
     dup2(fd, STDIN_FILENO);
     close(fd);
-    execl("./upper", "upper", NULL);
-    perror("exec ./upper");
+    execl("./upper.out", "upper", NULL);
+    perror("exec ./upper.out");
     exit(1);
 }
