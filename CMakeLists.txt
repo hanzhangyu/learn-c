@@ -38,6 +38,7 @@ add_executable(deamon src/session/daemon.c)
 add_executable(pthread_create src/thread/pthread_create.c)
 add_executable(attr_detach src/thread/attr_detach.c)
 add_executable(attr_stack src/thread/attr_stack.c)
+add_executable(attr_stack_max src/thread/attr_stack_max.c)
 
 
 
