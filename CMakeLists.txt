@@ -39,6 +39,10 @@ add_executable(pthread_create src/thread/pthread_create.c)
 add_executable(attr_detach src/thread/attr_detach.c)
 add_executable(attr_stack src/thread/attr_stack.c)
 add_executable(attr_stack_max src/thread/attr_stack_max.c)
+add_executable(add src/thread/lock/add.c)
+add_executable(add_lock src/thread/lock/add_lock.c)
+add_executable(add_lock_cycle src/thread/lock/add_lock_cycle.c)
+add_executable(add_r_w_lock src/thread/lock/add_r_w_lock.c)
 
 
 
