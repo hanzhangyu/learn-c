@@ -15,7 +15,10 @@ void *th_func(void *arg) {
   printf("thread id %x\n", (unsigned int)pthread_self());
   printf("thread pid %d\n", getpid());
   printf("thread *arg %d\n", *p);
-  // while (1);
+  // 没有发生系统调用，内核不会终止该线程，pthread_cancel无效
+  while (1) {
+    // pthread_testcancel(); // 让内核去检测是否需要终止该线程
+  }
 }
 
 int main(void) {
@@ -34,7 +37,10 @@ int main(void) {
   printf("main thread id %x\n", (unsigned int)pthread_self());
   printf("main thread id return %x\n", (unsigned int)tid);
   printf("main pid %d\n", getpid());
-  // while (1);
+  pthread_cancel(tid);
+  while (1)
+    sleep(1);
+
 
   return 0;
 }
