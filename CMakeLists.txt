@@ -36,6 +36,8 @@ add_executable(waitpid_signal src/signal/waitpid_signal.c)
 add_executable(setsid src/session/setsid.c)
 add_executable(deamon src/session/daemon.c)
 add_executable(pthread_create src/thread/pthread_create.c)
+add_executable(attr_detach src/thread/attr_detach.c)
+add_executable(attr_stack src/thread/attr_stack.c)
 
 
 
